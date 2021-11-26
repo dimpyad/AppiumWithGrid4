@@ -1,0 +1,15 @@
+[server]
+port = 7777
+
+[node]
+detect-drivers = false
+
+[relay]
+# Default Appium server endpoint
+url = "http://localhost:4723/wd/hub"
+
+status-endpoint = "/status"
+# Stereotypes supported by the service
+configs = [
+  "1", "{\"browserName\": \"\",\"noReset\": \"true\",\"appium:app\": \"https://github.com/cloudgrey-io/the-app/releases/download/v1.10.0/TheApp-v1.10.0.apk\",\"appium:udid\": \"emulator-5554\",\"appium:automationName\": \"UiAutomator2\", \"platformName\": \"Android\", \"appium:deviceName\": \"emulator-5554\"}"
+]

@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AndroidWebAppSuite" verbose="1" parallel="tests" thread-count="2">
+    <parameter name="appium_url"  value="http://192.168.56.1:4444"/>
+    <parameter name="appType"  value="web"/>
+    <!--   local 0.0.0.0:4723 and grid 192.168.56.1:4444-->
+    <test name="WebApp app test on Android Device">
+        <parameter name="platform" value="Android 11"/>
+        <parameter name="device" value="036f84c9"/>
+        <parameter name="udid" value="036f84c9"/>
+        <parameter name="systemPort" value="8602"/>
+        <classes>
+            <class name="WebAppTests" />
+        </classes>
+    </test> 
+    <test name="WebApp test on Windows">
+        <parameter name="platform" value="Windows 10"/>
+        <parameter name="device" value="windows"/>
+        <parameter name="udid" value="none"/>
+        <parameter name="systemPort" value="8603"/>
+        <classes>
+            <class name="WebAppTests" />
+        </classes>
+    </test>
+</suite>

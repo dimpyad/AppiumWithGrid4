@@ -1,0 +1,15 @@
+[server]
+port = 6666
+
+[node]
+detect-drivers = false
+
+[relay]
+# Default Appium server endpoint
+url = "http://localhost:4723/wd/hub"
+
+status-endpoint = "/status"
+# Stereotypes supported by the service
+configs = [
+  "1", "{\"browserName\": \"Chrome\",\"udid\": \"036f84c9\",\"automationName\": \"Appium\", \"platformName\": \"Android\", \"deviceName\": \"Oneplus\"}"
+]

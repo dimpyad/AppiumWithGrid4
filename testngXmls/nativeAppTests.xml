@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AndroidNativeSuite" verbose="1" parallel="tests" thread-count="2">
+    <parameter name="appium_url"  value="http://192.168.56.1:4444"/>
+    <!-- grid http://192.168.56.1:4444 and localhost - http://0.0.0.0:4723/wd/hub-->
+    <parameter name="appType"  value="native"/>
+    <test name="Android native app test on Android Device">
+        <parameter name="platform" value="Android 11"/>
+        <parameter name="device" value="036f84c9"/>
+        <parameter name="udid" value="036f84c9"/>
+         <parameter name="systemPort" value="8200"/>
+        <classes>
+            <class name="NativeAppTests" />
+        </classes>
+    </test>
+    <test name="Android native app test on Android Emulator">
+        <parameter name="platform" value="Android 11"/>
+        <parameter name="device" value="emulator-5554"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="systemPort" value="8201"/>
+        <classes>
+            <class name="NativeAppTests" />
+        </classes>
+    </test>
+</suite>
