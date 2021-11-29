@@ -18,6 +18,13 @@ This repository contains the source code presented as part of the virtual meetup
 
 Note: All the node config files are present under src/test/resources folder
 
+## testng configuration
+- Update the grid ip address in the files under testngXmls/*.xml
+- Update the udid of the devices connected in the files under testngXmls/*.xml
+
+## Selenium grid configuration
+- Update the udid of the devices connected in the node toml config files under src/test/resources/*.toml 
+
 ## Run the tests
 - To run the web tests use the xml file under testngXmls/webAppTests.xml
 - To run the native app tests use the xml file under testngXmls/nativeAppTests.xml
