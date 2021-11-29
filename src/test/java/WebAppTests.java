@@ -1,5 +1,5 @@
 import org.testng.annotations.Test;
-import java.net.MalformedURLException;
+
 
 
 
@@ -11,11 +11,11 @@ public class WebAppTests extends BaseTests{
 
 	    
     @Test
-    public void testGitlabTitle() throws MalformedURLException, InterruptedException {
+    public void testGitlabTitle() {
     	 startWebDriver(platformName);
     	 
     	 System.out.println("The thread ID for this test = "+ Thread.currentThread().getId());
-    	 Thread.sleep(2000);
+
          // Opening URL
          webDriver.get("https://gitlab.com/");
          

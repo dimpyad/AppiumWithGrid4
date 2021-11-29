@@ -9,6 +9,7 @@ detect-drivers = false
 url = "http://localhost:4723/wd/hub"
 
 status-endpoint = "/status"
+
 # Stereotypes supported by the service
 configs = [
   "1", "{\"browserName\": \"Chrome\",\"udid\": \"036f84c9\",\"automationName\": \"Appium\", \"platformName\": \"Android\", \"deviceName\": \"Oneplus\"}"

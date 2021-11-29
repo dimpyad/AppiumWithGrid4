@@ -6,8 +6,8 @@
     <!--   local 0.0.0.0:4723 and grid 192.168.56.1:4444-->
     <test name="WebApp app test on Android Device">
         <parameter name="platform" value="Android 11"/>
-        <parameter name="device" value="036f84c9"/>
-        <parameter name="udid" value="036f84c9"/>
+        <parameter name="device" value="123456"/>
+        <parameter name="udid" value="123456"/>
         <parameter name="systemPort" value="8602"/>
         <classes>
             <class name="WebAppTests" />

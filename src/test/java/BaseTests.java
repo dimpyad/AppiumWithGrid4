@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
@@ -20,7 +19,15 @@ public class BaseTests {
 	    DesiredCapabilities capabilities;
         String serverUrl;
         String platformName;
-        
+        /*
+         * Reading desired capabilities from testng.xml file
+         * @param appium_url - the url of the hub or local appium server
+         * @param platform - platform name (windows/android)
+         * @param udid - unique id of the real device or emulator
+         * @param systemPort - system port number for local execution
+         * @param device - device name of real device or emulator
+         * @param appType - web application or native application
+         */
 	    @BeforeClass(alwaysRun = true)
 	    @Parameters({"appium_url","platform", "udid", "systemPort","device", "appType"})
 	    public void setup(String appiumUrl,String platform, 
@@ -31,6 +38,10 @@ public class BaseTests {
 	        platformName = platformInfo[0];
 	        capabilities = new DesiredCapabilities();
 	        serverUrl = appiumUrl;
+	        
+	        /*
+	         * If the application is not web then set the device capabilities
+	         */
 	        if(!appType.equals("web"))
 	        {	        
 		        capabilities.setCapability("automationName", "uiautomator2");
@@ -53,7 +64,9 @@ public class BaseTests {
 	        }
 	       
 	    }
-	    
+	    /*
+	     * Starting android driver
+	     */
 	    protected void startAndroidDriver()
 	    {
 	    	try {
@@ -66,12 +79,17 @@ public class BaseTests {
 	    }
 	    
 	    
-	    
+	    /*
+	     * Stoping android deriver
+	     */
 	    protected void stopAndroidDriver() {
 	    	if(androidDriver!=null)
 	    		 androidDriver.quit();
 		}
 	    
+	    /*
+	     * Starting remote webdriver based on platform
+	     */
 	    protected void startWebDriver(String platform)
 	    {
 	    	if(platform.equals("Android"))
@@ -99,17 +117,13 @@ public class BaseTests {
 	    }
 	    
 	    
-	    
+	    /*
+	     * Stopping remote webdriver
+	     */
 	    protected void stopWebDriver() {
 	    	if(webDriver!=null)
 	    		 webDriver.quit();
 		}
-	    @AfterTest
-	    public void tearDown()
-	    {   	 
-	    	 if(webDriver!=null)
-	    		 webDriver.quit();
-	    }
-	    
+	   
 
 }
