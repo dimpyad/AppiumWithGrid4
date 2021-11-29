@@ -1,10 +1,10 @@
-This repository contains the source code presented as part of the virtual meetup organized by The Test Tribe Community.
-- [Link to the event](https://thetesttribe.com/event/the-test-tribe-6th-virtual-meetup/)
+This repository contains the source code presented as part of the virtual meetup organized by [The Test Tribe Community](https://thetesttribe.com/event/the-test-tribe-6th-virtual-meetup/)
 
 ## Setup needed for running this code
 - Selenium grid4 jar file [link to download](https://www.selenium.dev/documentation/grid/)
-- Windows host machine with chrome browser installed
-- Windows host machine with android setup (SDK and emulator)
+- Host machine with chrome browser installed
+- Host machine with android setup (SDK and emulator)
+- Install node js [link to download](https://nodejs.org/en/download/)
 - Appium server [link to download](https://github.com/appium/appium-desktop/releases/)
 
 ## How to start grid in hub mode
