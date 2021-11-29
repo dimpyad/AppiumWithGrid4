@@ -17,17 +17,17 @@ public class BaseTests {
 	    RemoteWebDriver webDriver;
 	    AndroidDriver<MobileElement> androidDriver;
 	    DesiredCapabilities capabilities;
-        String serverUrl;
-        String platformName;
-        /*
-         * Reading desired capabilities from testng.xml file
-         * @param appium_url - the url of the hub or local appium server
-         * @param platform - platform name (windows/android)
-         * @param udid - unique id of the real device or emulator
-         * @param systemPort - system port number for local execution
-         * @param device - device name of real device or emulator
-         * @param appType - web application or native application
-         */
+            String serverUrl;
+            String platformName;
+            /*
+            * Reading desired capabilities from testng.xml file
+            * @param appium_url - the url of the hub or local appium server
+            * @param platform - platform name (windows/android)
+            * @param udid - unique id of the real device or emulator
+            * @param systemPort - system port number for local execution
+            * @param device - device name of real device or emulator
+            * @param appType - web application or native application
+            */
 	    @BeforeClass(alwaysRun = true)
 	    @Parameters({"appium_url","platform", "udid", "systemPort","device", "appType"})
 	    public void setup(String appiumUrl,String platform, 
